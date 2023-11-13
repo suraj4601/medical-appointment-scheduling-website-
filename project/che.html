@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Waste Management</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ff9900;
+        }
+
+        section {
+            padding: 2em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .welcome-message {
+            text-align: center;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .services-list {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .services-list li {
+            margin: 1em 0;
+            padding: 1em;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .services-list li:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>E-Waste Management</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#recycling">Recycling</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="image1.jpg" alt="Image 1">
+            </div>
+
+            <div class="mySlides">
+                <img src="image2.jpg" alt="Image 2">
+            </div>
+
+            <div class="mySlides">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <p class="welcome-message">Welcome to our E-Waste Management Page. Proper disposal of electronic waste is crucial for environmental sustainability. Learn about our services and how we contribute to responsible e-waste recycling.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul class="services-list">
+            <li>Electronic waste collection</li>
+            <li>Safe disposal of electronic devices</li>
+            <li>Data destruction services</li>
+            <li>Recycling programs</li>
+        </ul>
+    </section>
+
+    <section id="recycling">
+        <h2>Recycling Process</h2>
+        <p>Learn about our environmentally friendly recycling process and how we ensure that e-waste is handled responsibly.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p class="contact-info">If you have any questions or would like to inquire about our services, please contact us:</p>
+        <p class="contact-info">Email: info@ewastemanagement.com</p>
+        <p class="contact-info">Phone: +1 (123) 456-7890</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 E-Waste Management</p>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
